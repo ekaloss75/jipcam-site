@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>jipcam - 후원</title>
+<title>jipcam - Release</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
@@ -73,60 +73,41 @@
     max-width:640px; margin:0 0 56px;
   }
 
-  .qr-grid{
-    display:grid; grid-template-columns:1fr 1fr; gap:24px;
-    margin-bottom:36px;
-  }
-  .qr-card{
+  .release{
     background:rgba(255,255,255,0.7);
-    backdrop-filter:blur(20px);
+    backdrop-filter:blur(12px);
     border:1px solid rgba(11,8,20,0.08);
-    border-radius:24px;
-    box-shadow:0 40px 80px -20px rgba(192,38,211,0.18);
-    padding:40px 32px;
-    text-align:center;
+    border-radius:20px;
+    padding:28px 32px;
+    margin-bottom:20px;
+    box-shadow:0 20px 50px -20px rgba(192,38,211,0.12);
     transition:transform 0.3s ease, box-shadow 0.3s ease;
   }
-  .qr-card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 48px 90px -20px rgba(192,38,211,0.25);
+  .release:hover{
+    transform:translateY(-2px);
+    box-shadow:0 28px 60px -20px rgba(192,38,211,0.18);
   }
-  .qr-card .icon{
-    width:48px; height:48px; margin:0 auto 16px;
-    border-radius:12px;
-    display:grid; place-items:center; font-size:24px;
-    border:1px solid rgba(11,8,20,0.08);
+  .release .ver-row{
+    display:flex; align-items:baseline; gap:14px;
+    margin-bottom:14px;
   }
-  .qr-card .icon.kakao{background:#FEE500}
-  .qr-card .icon.toss{background:#0064FF}
-  .qr-card .name{
-    font-size:20px; font-weight:700; letter-spacing:-0.02em;
-    margin-bottom:6px;
+  .release .version{
+    font-size:24px; font-weight:700;
+    letter-spacing:-0.02em;
+    color:#C026D3;
+    font-family:'JetBrains Mono',ui-monospace,monospace;
   }
-  .qr-card .desc{
-    font-size:13px; color:rgba(11,8,20,0.55); margin-bottom:24px;
-  }
-  .qr-card img.qr{
-    width:220px; height:220px; border-radius:12px;
-    border:1px solid rgba(11,8,20,0.06);
-  }
-  .qr-card .how{
-    margin-top:16px;
+  .release .date{
     font-size:12px; color:rgba(11,8,20,0.45);
     font-family:'JetBrains Mono',ui-monospace,monospace;
   }
-
-  .sidenote{
-    margin-top:32px;
-    padding:18px 22px;
-    background:rgba(255,255,255,0.5);
-    backdrop-filter:blur(12px);
-    border:1px solid rgba(11,8,20,0.08);
-    border-radius:14px;
-    display:flex; align-items:flex-start; gap:14px;
-    font-size:14px; color:rgba(11,8,20,0.7); line-height:1.65;
+  .release ul{
+    padding-left:22px; margin:0;
+    font-size:15px; line-height:1.75;
+    color:rgba(11,8,20,0.78);
   }
-  .sidenote .badge{flex-shrink:0;color:#C026D3;font-weight:700}
+  .release ul li{margin-bottom:4px}
+  .release ul li::marker{color:#C026D3}
 
   footer{
     margin-top:80px;
@@ -149,9 +130,8 @@
     .nav-dl{padding:8px 14px;font-size:12px}
     h1{font-size:clamp(36px,9vw,56px)}
     .lede{font-size:15px;margin-bottom:36px}
-    .qr-grid{grid-template-columns:1fr;gap:16px}
-    .qr-card{padding:28px 20px}
-    .qr-card img.qr{width:180px;height:180px}
+    .release{padding:22px 22px}
+    .release .version{font-size:20px}
     footer{padding:20px 18px 28px}
     .foot{flex-direction:column;align-items:center;text-align:center}
   }
@@ -174,7 +154,7 @@
         <a href="index.html#faq">자주 묻는 질문</a>
         <a href="release.html">Release</a>
         <a href="feedback.html">개선 요청</a>
-        <a href="donate.html" >후원</a>
+        <a href="donate.html">후원</a>
       </div>
       <a class="nav-dl" href="index.html">다운로드 ↗</a>
     </div>
@@ -182,35 +162,85 @@
 
   <!-- Header -->
   <div class="container">
-    <h1>커피 한 잔으로<br>응원해주세요.</h1>
+    <span class="eyebrow"><span class="dot"></span>RELEASE NOTES</span>
+    <h1>버전별<br>변경 사항</h1>
     <p class="lede">
-      광고 없는 무료 도구를 계속 유지하는 데 쓰입니다.
+      jipcam의 새로운 기능과 개선 사항을 버전순으로 정리했습니다.
     </p>
 
-    <!-- QR Cards -->
-    <div class="qr-grid">
-      <div class="qr-card">
-        <div class="icon kakao">💬</div>
-        <div class="name">카카오페이</div>
-        <div class="desc">카카오톡 앱으로 QR을 스캔하세요</div>
-        <img class="qr" src="assets/kakaopay_qr.png" alt="카카오페이 QR">
-        <div class="how">카카오톡 → 스캔 → 송금</div>
+    <!-- Releases -->
+    <div class="release">
+      <div class="ver-row">
+        <div class="version">v1.1.13</div>
+        <div class="date">2026-05-26</div>
       </div>
-      <div class="qr-card">
-        <div class="icon toss" style="color:#fff">💙</div>
-        <div class="name">토스</div>
-        <div class="desc">토스 앱으로 QR을 스캔하세요</div>
-        <img class="qr" src="assets/toss_qr.jpg" alt="토스 QR">
-        <div class="how">토스 → 스캔 → 송금</div>
-      </div>
+      <ul>
+        <li>파일 드래그앤드롭으로 미디어 추가 (mp4 / mp3 / png / jpg / gif 등)</li>
+        <li>녹화 정지 시 영역 초기화 (idle 복귀)</li>
+        <li>Sense-Voice 감정/이벤트 토큰 자막 표시 + 한국어 매핑 ([음악], [박수], [웃음] 등)</li>
+        <li>Silero VAD v4 → v5 모델 업그레이드</li>
+        <li>컬러 피커 돋보기 멀티 모니터 대응</li>
+        <li>이미지 편집기 선/화살표/양방향 3종 + Shift 키 스냅</li>
+      </ul>
     </div>
 
-    <div class="sidenote">
-      <span class="badge">♥</span>
-      <div>
-        후원금은 jipcam의 지속적인 개발과 서버 유지에 사용됩니다.
-        금액에 상관없이 모든 후원에 감사드립니다.
+    <div class="release">
+      <div class="ver-row">
+        <div class="version">v1.1.12</div>
+        <div class="date">2026-05</div>
       </div>
+      <ul>
+        <li>STT 자막 한국어 라벨 매핑</li>
+        <li>NSIS LZMA solid 압축으로 설치본 사이즈 축소</li>
+      </ul>
+    </div>
+
+    <div class="release">
+      <div class="ver-row">
+        <div class="version">v1.1.11</div>
+        <div class="date">2026-05</div>
+      </div>
+      <ul>
+        <li>자막 추출(STT) 기능 + 미리보기/편집기 CC 토글</li>
+        <li>오디오 미리보기 자막 추출 버튼</li>
+        <li>이미지 편집 서브 메뉴 위치/정렬 정리</li>
+        <li>OCR/배경제거 진행 메시지 + 즉시 스피너</li>
+      </ul>
+    </div>
+
+    <div class="release">
+      <div class="ver-row">
+        <div class="version">v1.1.10</div>
+        <div class="date">2026-04</div>
+      </div>
+      <ul>
+        <li>음원 추출(MP3)</li>
+        <li>썸네일 동기화 + Release 빌드 ffmpeg 자동 복사</li>
+        <li>main.dart 코드 분할 리팩토링</li>
+      </ul>
+    </div>
+
+    <div class="release">
+      <div class="ver-row">
+        <div class="version">v1.1.9</div>
+        <div class="date">2026-04</div>
+      </div>
+      <ul>
+        <li>웹캠 화질 개선</li>
+        <li>한글 IME 입력 안정화</li>
+        <li>도구 UI 정리</li>
+      </ul>
+    </div>
+
+    <div class="release">
+      <div class="ver-row">
+        <div class="version">v1.1.8</div>
+        <div class="date">2026-03</div>
+      </div>
+      <ul>
+        <li>썸네일 필터링 기능</li>
+        <li>캡션바 아이콘 호버 + 스페이스 버전 표시 이스터에그</li>
+      </ul>
     </div>
   </div>
 </div>
