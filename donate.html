@@ -116,6 +116,22 @@
     font-family:'JetBrains Mono',ui-monospace,monospace;
   }
 
+  .section-label{
+    font-size:12px; font-weight:600; letter-spacing:0.08em;
+    color:rgba(11,8,20,0.4); text-transform:uppercase;
+    margin:0 0 14px; font-family:'JetBrains Mono',ui-monospace,monospace;
+  }
+
+  .donate-btn{
+    display:block; width:100%; margin-top:24px;
+    padding:14px 0; color:#fff; border-radius:14px;
+    font-weight:700; font-size:15px; text-decoration:none;
+    text-align:center; transition:opacity 0.2s; box-sizing:border-box;
+  }
+  .donate-btn:hover{opacity:0.82}
+  .donate-btn.paypal{background:#009CDE}
+  .donate-btn.kofi{background:#FF5E5B}
+
   .sidenote{
     margin-top:32px;
     padding:18px 22px;
@@ -188,6 +204,8 @@
       광고 없는 무료 도구를 계속 유지하는 데 쓰입니다.
     </p>
 
+    <!-- 국내 후원 -->
+    <div class="section-label">Domestic · 국내 후원</div>
     <!-- QR Cards -->
     <div class="qr-grid">
       <div class="qr-card">
@@ -203,6 +221,23 @@
         <div class="desc">토스 앱으로 QR을 스캔하세요</div>
         <img class="qr" src="assets/toss_qr.jpg" alt="토스 QR">
         <div class="how">토스 → 스캔 → 송금</div>
+      </div>
+    </div>
+
+    <!-- 해외 후원 -->
+    <div class="section-label" style="margin-top:48px">International · 해외 후원</div>
+    <div class="qr-grid">
+      <div class="qr-card">
+        <div class="icon" style="background:#003087;color:#fff">💳</div>
+        <div class="name">PayPal</div>
+        <div class="desc">전 세계 결제</div>
+        <a href="https://paypal.me/ekaloss75" class="donate-btn paypal">Donate via PayPal ↗</a>
+      </div>
+      <div class="qr-card">
+        <div class="icon" style="background:#FF5E5B;color:#fff">☕</div>
+        <div class="name">Ko-fi</div>
+        <div class="desc">간편한 후원</div>
+        <a href="https://ko-fi.com/ekaloss75" class="donate-btn kofi">Buy me a coffee ↗</a>
       </div>
     </div>
 
