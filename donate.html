@@ -206,6 +206,21 @@
 
     <!-- Donation Cards -->
     <div id="donate-sections">
+      <div class="qr-grid" id="international-cards">
+        <div class="qr-card">
+          <div class="icon" style="background:#003087;color:#fff">💳</div>
+          <div class="name">PayPal</div>
+          <div class="desc">전 세계 결제</div>
+          <a href="https://paypal.me/ekaloss75" class="donate-btn paypal">Donate via PayPal ↗</a>
+        </div>
+        <div class="qr-card">
+          <div class="icon" style="background:#FF5E5B;color:#fff">☕</div>
+          <div class="name">Ko-fi</div>
+          <div class="desc">간편한 후원</div>
+          <a href="https://ko-fi.com/ekaloss75" class="donate-btn kofi">Buy me a coffee ↗</a>
+        </div>
+      </div>
+
       <div class="qr-grid" id="domestic-cards">
         <div class="qr-card">
           <div class="icon kakao">💬</div>
@@ -220,21 +235,6 @@
           <div class="desc">토스 앱으로 QR을 스캔하세요</div>
           <img class="qr" src="assets/toss_qr.jpg" alt="토스 QR">
           <div class="how">토스 → 스캔 → 송금</div>
-        </div>
-      </div>
-
-      <div class="qr-grid" id="international-cards">
-        <div class="qr-card">
-          <div class="icon" style="background:#003087;color:#fff">💳</div>
-          <div class="name">PayPal</div>
-          <div class="desc">전 세계 결제</div>
-          <a href="https://paypal.me/ekaloss75" class="donate-btn paypal">Donate via PayPal ↗</a>
-        </div>
-        <div class="qr-card">
-          <div class="icon" style="background:#FF5E5B;color:#fff">☕</div>
-          <div class="name">Ko-fi</div>
-          <div class="desc">간편한 후원</div>
-          <a href="https://ko-fi.com/ekaloss75" class="donate-btn kofi">Buy me a coffee ↗</a>
         </div>
       </div>
     </div>
@@ -267,12 +267,6 @@
 <script>
   document.getElementById('navIcon').src = 'assets/icon.png';
   document.getElementById('footIcon').src = 'assets/icon.png';
-
-  // 지역별 후원 카드 순서 설정 (해외면 국제 결제가 상단)
-  const isKorean = navigator.language.toLowerCase().startsWith('ko');
-  if (!isKorean) {
-    document.getElementById('donate-sections').style.flexDirection = 'column-reverse';
-  }
 </script>
 </body>
 </html>
